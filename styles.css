@@ -151,7 +151,7 @@ nav {
   background-color: #13183f;
 }
 .img-mobile {
-  content: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-mobile.png);
+  content: url(/assets/image-hero-mobile.png);
   max-width: 100%;
   margin: 0 auto;
 }
@@ -175,7 +175,7 @@ nav {
     display: none;
   }
   .img-tablet {
-    background-image: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-tablet.png);
+    background-image: url(/assets/image-hero-tablet.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 600px;
@@ -201,7 +201,7 @@ nav {
     padding-bottom: 3em;
   }
   .img-tablet {
-    background-image: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-desktop@2x.png);
+    background-image: url(/assets/image-hero-desktop@2x.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 600px;
