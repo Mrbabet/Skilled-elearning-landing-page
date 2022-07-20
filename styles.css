@@ -68,6 +68,7 @@ body {
   width: 100vw;
   font-family: var(--ff-);
   background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
+  overflow-x: hidden;
 }
 .container {
   margin-inline: 1em;
@@ -118,7 +119,7 @@ nav {
 .box-group {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1em;
+  gap: 2.5em;
   padding-bottom: 3em;
 }
 .rectangle {
@@ -130,18 +131,21 @@ nav {
 }
 .rectangle h2 {
   color: var(--white);
+  padding-block: 1em;
 }
 .rectangle span {
   font-size: 1.5rem;
   text-align: center;
   font-weight: bolder;
 }
-.box {
-  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
+.box,
+.rectangle {
   padding: 2em 4em;
   background-color: white;
   border-radius: 1em;
+  position: relative;
 }
+
 .footer-wrapper {
   padding-inline: 1em;
   padding-block: 1.5em;
@@ -155,13 +159,57 @@ nav {
   max-width: 100%;
   margin: 0 auto;
 }
+.svg-graf {
+  position: absolute;
+  left: 1;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+/* Hover */
+
+.box:hover {
+  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.4s;
+}
+.box h3:hover {
+  background: linear-gradient(#ff4f48, #f02aa6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: all ease-in-out 1s;
+}
+.rectangle:hover ~ .box {
+  transform: scale(0.9);
+  transition: all ease-in-out 0.4s;
+  filter: hue-rotate(-80deg);
+  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
+}
+.rectangle ~ .box {
+  transition: ease-in-out 0.4s;
+}
+
+.rectangle:hover {
+  filter: hue-rotate(-80deg);
+  transition: ease-in-out 0.4s;
+}
+.box .link:hover {
+  opacity: 0.5;
+  transition: ease-in 0.3s;
+}
+.box .link {
+  opacity: 1;
+  transition: ease-in 0.3s;
+}
 
 @media screen and (min-width: 768px) {
   .box-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 1em;
+    gap: 4em;
     padding-bottom: 3em;
   }
   .container {
@@ -193,15 +241,18 @@ nav {
   }
 }
 @media screen and (min-width: 1440px) {
+  .img-tablet {
+    display: none;
+  }
   .box-group {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 1em;
+    gap: 5em;
     padding-bottom: 3em;
   }
-  .img-tablet {
-    background-image: url(/assets/image-hero-desktop@2x.png);
+  .img-desktop {
+    background-image: url(/assets/image-hero-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 600px;
@@ -210,5 +261,17 @@ nav {
     position: absolute;
     top: -70px;
     right: -120px;
+  }
+  footer {
+    background-color: #13183f;
+  }
+  .footer-wrapper {
+    padding-inline: 1em;
+    padding-block: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
