@@ -24,6 +24,11 @@
 
   font-size: 16px;
 }
+/* img {
+  font-size: 0;
+  line-height: 0;
+  float: left;
+} */
 
 .heading-xl {
   font: 800 56px/71px "Plus Jakarta Sans", sans-serif;
@@ -65,7 +70,7 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
 }
 .container {
-  margin-inline: 3em;
+  margin-inline: 1em;
 }
 
 nav {
@@ -138,13 +143,19 @@ nav {
   border-radius: 1em;
 }
 .footer-wrapper {
-  padding-inline: 3em;
+  padding-inline: 1em;
   padding-block: 1.5em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #13183f;
 }
+.img-mobile {
+  content: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-mobile.png);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 768px) {
   .box-group {
     display: grid;
@@ -154,11 +165,31 @@ nav {
     padding-bottom: 3em;
   }
   .container {
-    margin-inline: 3em;
+    margin-inline: 2.5em;
   }
   .container-wrapper {
     max-width: 1100px;
     margin: 0 auto;
+  }
+  .img-mobile {
+    display: none;
+  }
+  .img-tablet {
+    background-image: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-tablet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    aspect-ratio: 1/1;
+    height: 600px;
+    position: absolute;
+    top: -50px;
+    right: -260px;
+  }
+  .hero__text {
+    max-width: 460px;
+  }
+  .Hero {
+    padding-bottom: 12em;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -168,5 +199,16 @@ nav {
     grid-template-rows: repeat(2, 1fr);
     gap: 1em;
     padding-bottom: 3em;
+  }
+  .img-tablet {
+    background-image: url(/skilled-elearning-landing-page/starter-code/assets/image-hero-desktop@2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 600px;
+    aspect-ratio: 1/1;
+    height: 600px;
+    position: absolute;
+    top: -70px;
+    right: -120px;
   }
 }
