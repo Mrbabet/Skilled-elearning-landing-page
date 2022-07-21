@@ -152,6 +152,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+footer {
   background-color: #13183f;
 }
 .img-mobile {
@@ -167,42 +169,6 @@ nav {
 }
 
 /* Hover */
-
-.box:hover {
-  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
-  transform: scale(1.05);
-  transition: all ease-in-out 0.4s;
-}
-.box h3:hover {
-  background: linear-gradient(#ff4f48, #f02aa6);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  transition: all ease-in-out 1s;
-}
-.rectangle:hover ~ .box {
-  transform: scale(0.9);
-  transition: all ease-in-out 0.4s;
-  filter: hue-rotate(-80deg);
-  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
-}
-.rectangle ~ .box {
-  transition: ease-in-out 0.4s;
-}
-
-.rectangle:hover {
-  filter: hue-rotate(-80deg);
-  transition: ease-in-out 0.4s;
-}
-.box .link:hover {
-  opacity: 0.5;
-  transition: ease-in 0.3s;
-}
-.box .link {
-  opacity: 1;
-  transition: ease-in 0.3s;
-}
 
 @media screen and (min-width: 768px) {
   .box-group {
@@ -239,6 +205,16 @@ nav {
   .Hero {
     padding-bottom: 12em;
   }
+  .footer-wrapper {
+    all: unset;
+    padding-inline: 1em;
+    padding-block: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 }
 @media screen and (min-width: 1440px) {
   .img-tablet {
@@ -262,10 +238,8 @@ nav {
     top: -70px;
     right: -120px;
   }
-  footer {
-    background-color: #13183f;
-  }
   .footer-wrapper {
+    all: unset;
     padding-inline: 1em;
     padding-block: 1.5em;
     display: flex;
@@ -274,4 +248,42 @@ nav {
     max-width: 1100px;
     margin: 0 auto;
   }
+}
+
+@media (hover) {
+}
+.box:hover {
+  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
+  transform: scale(1.05);
+  transition: all ease-in-out 0.4s;
+}
+.box h3:hover {
+  background: linear-gradient(#ff4f48, #f02aa6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: all ease-in-out 1s;
+}
+.rectangle:hover ~ .box {
+  transform: scale(0.9);
+  transition: all ease-in-out 0.4s;
+  filter: hue-rotate(-80deg);
+  box-shadow: 0.7em 0.7em 1.2em 0.7em #f02aa72d;
+}
+.rectangle ~ .box {
+  transition: ease-in-out 0.4s;
+}
+
+.rectangle:hover {
+  filter: hue-rotate(-80deg);
+  transition: ease-in-out 0.4s;
+}
+.box .link:hover {
+  opacity: 0.5;
+  transition: ease-in 0.3s;
+}
+.box .link {
+  opacity: 1;
+  transition: ease-in 0.3s;
 }
