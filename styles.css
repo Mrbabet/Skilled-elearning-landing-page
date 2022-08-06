@@ -94,6 +94,16 @@ nav {
 }
 .button-primary {
   background-color: var(--dark-blue);
+  z-index: 10;
+}
+.button-primary:hover {
+  background-color: #666ca3;
+  transition: ease-in-out 200ms;
+}
+.color-accent:hover {
+  background: #ff4f48, #f02aa6;
+  transition: ease-in-out 300ms;
+  opacity: 0.6;
 }
 .Hero p {
   font-size: 1rem;
